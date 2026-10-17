@@ -1,6 +1,8 @@
-# Sonora
+# Sonora — Music Player
 
 A responsive, Apple Music-inspired **local music player for the browser**. Import your own audio files and listen with a polished library, queue, playlists, synced lyrics, and a full-screen player.
+
+🌐 **Live demo:** https://sonora-music-player-alpha.vercel.app/
 
 > Sonora is an independent concept project. It is not affiliated with or endorsed by Apple, and it does not stream music from Apple Music.
 
@@ -20,6 +22,10 @@ A responsive, Apple Music-inspired **local music player for the browser**. Impor
 - Keyboard shortcuts and media-session metadata where supported
 - No framework, package install, backend, or API key required
 
+## Try it online
+
+Open the **[Sonora live demo](https://sonora-music-player-alpha.vercel.app/)**. For the best experience, use a modern browser and import music files from your own device.
+
 ## Run locally
 
 This is a static, single-page app. The simplest reliable way to run it is with a local web server.
@@ -32,21 +38,26 @@ Then open [http://localhost:8000](http://localhost:8000).
 
 You can also open `index.html` directly in a modern browser, but browser storage and file APIs work more consistently when served from `localhost` or HTTPS.
 
-## Deploy with GitHub Pages
-
-1. Create a new GitHub repository named `sonora-music-player`.
-2. Upload all project files (`index.html`, `README.md`, `.nojekyll`, `manifest.webmanifest`, `service-worker.js`, and the icon files) to the repository's root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the `main` branch and `/ (root)`, then save.
-6. Wait for GitHub Pages to publish the site; the URL will appear in the Pages settings.
-
 ## Deploy with Vercel
 
-1. Push this repository to GitHub.
-2. In Vercel, import the repository.
-3. Choose the **Other** framework preset; no build command is needed for this static HTML project.
-4. Set the output directory to `.` if Vercel asks for one, then deploy.
+1. Import this GitHub repository into [Vercel](https://vercel.com/).
+2. Choose the **Other** framework preset; no build command is needed for this static HTML project.
+3. Set the output directory to `.` if Vercel asks for one, then deploy.
+
+## Deploy with GitHub Pages
+
+1. Open **Settings → Pages** in the repository.
+2. Under **Build and deployment**, choose **Deploy from a branch**.
+3. Select the `main` branch and `/ (root)`, then save.
+4. Wait for GitHub Pages to publish the site; the URL will appear in the Pages settings.
+
+## Project structure
+
+- `index.html` — complete player interface and application logic
+- `manifest.webmanifest` — installable web app metadata
+- `service-worker.js` — caches the app shell for repeat offline visits
+- `icon.svg`, `icon-192.png`, `icon-512.png` — app icons
+- `.nojekyll` — GitHub Pages configuration
 
 ## Privacy and storage notes
 
@@ -74,6 +85,6 @@ You can also open `index.html` directly in a modern browser, but browser storage
 | `/` | Search |
 | `Esc` | Close menus or full-screen player |
 
-## Tech
+## Tech stack
 
 HTML, CSS, and vanilla JavaScript. No build step or external runtime dependencies.
